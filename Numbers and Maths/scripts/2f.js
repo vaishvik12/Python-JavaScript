@@ -1,0 +1,11 @@
+let basketball = 2095;
+let tshirt = 799;
+let shipping = 499;
+let tax = 0.1;
+let costBeforeShipping = basketball + tshirt;
+let totalBeforeTax = costBeforeShipping + shipping;
+let estimateTax = Math.round(totalBeforeTax * tax);
+console.log(costBeforeShipping/100);
+console.log(totalBeforeTax/100);
+console.log(estimateTax/100);
+console.log((totalBeforeTax + estimateTax)/100);
