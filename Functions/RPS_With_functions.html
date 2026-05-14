@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h2>Rock paper Scissors</h2>
+
+  <div>
+    <button
+    onClick = "
+      playComputerMove();
+      playGame('Rock');
+    "
+    >Rock</button>
+
+    <button
+    onClick = "
+      playComputerMove();
+      playGame('Paper');
+    "
+    >Paper</button>
+
+    <button
+    onClick = "  
+      playComputerMove();
+      playGame('Scissors');
+    "
+    >Scissors</button>
+  </div>
+  <script>
+    let computerMove = "";
+  
+    function playComputerMove(){
+      computerMove = Math.random();  // 0.45
+      if(computerMove < 0.33){
+        computerMove = 'Rock'
+      }else if(computerMove >= 0.33 && computerMove < 0.66){
+        computerMove = 'Paper'
+      }else{
+        computerMove = 'Scissors';
+      }
+    }
+
+    function playGame(userMove){
+      let result = "";
+
+      if(computerMove === userMove){
+        result = `It's a tie`;
+      }else if((computerMove === 'Paper' && userMove === 'Scissors') 
+      || (computerMove === "Rock" && userMove === "Paper")
+      || (computerMove === "Scissors" && userMove === "Rock")){
+        result = `You win!`;
+      }else{
+        result = `You lose!`;
+      }
+
+      console.log(`You picked ${userMove}. Computer Picked ${computerMove}. ${result}`);
+    }
+  </script>
+</body>
+</html>

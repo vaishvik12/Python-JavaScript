@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h2>Rock paper Scissors</h2>
+
+  <div>
+    <button
+    onClick = "
+      userMove = 'Rock';
+      computerMove = Math.random();  // 0.45
+
+
+      if(computerMove < 0.33){
+        computerMove = 'Rock'
+      }else if(computerMove >= 0.33 && computerMove < 0.66){
+        computerMove = 'Paper'
+      }else{
+        computerMove = 'Scissors';
+      }
+
+
+      if(computerMove === 'Rock'){
+        console.log(`It's a ties`);
+      }else if(computerMove === 'Paper'){
+        console.log(`You lose!`);
+      }else{
+        console.log(`You Win!`);
+      }
+      console.log(`You picked ${userMove}. Computer Picked ${computerMove}. ${result}`);
+    "
+    >Rock</button>
+
+    <button
+    onClick = "
+      userMove = 'Paper';
+      computerMove = Math.random();
+      if(computerMove < 0.33){
+        computerMove = 'Rock'
+      }else if(computerMove >= 0.33 && computerMove < 0.66){
+        computerMove = 'Paper'
+      }else{
+        computerMove = 'Scissors';
+      }
+
+
+      if(computerMove === 'Rock'){
+       result =  `You Win!`;
+      }else if(computerMove === 'Paper'){
+        result = `It's a tie`;
+      }else{
+        result = `You Lose`;
+      }
+
+
+      console.log(`You picked ${userMove}. Computer Picked ${computerMove}. ${result}`);
+    "
+    >Paper</button>
+
+    <button
+    onClick = "
+      userMove = 'Scissors';
+      computerMove = Math.random();
+      if(computerMove < 0.33){
+        computerMove = 'Rock'
+      }else if(computerMove >= 0.33 && computerMove < 0.66){
+        computerMove = 'Paper'
+      }else{
+        computerMove = 'Scissors';
+      }
+      console.log(computerMove);
+
+      if(computerMove === 'Rock'){
+        console.log(`You lose`);
+      }else if(computerMove === 'Paper'){
+        console.log(`You win!`);
+      }else{
+        console.log(`It's a tie!`);
+      }
+      console.log(`You picked ${userMove}. Computer Picked ${computerMove}. ${result}`);
+    "
+    >Scissors</button>
+  </div>
+  <script>
+    let userMove = '';
+    let computerMove = "";
+    let result = "";
+  </script>
+</body>
+</html>

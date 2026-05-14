@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h2>Rock paper Scissors</h2>
+
+  <div>
+    <button
+    onClick = "
+      playComputerMove();
+      playGame('Rock');
+    "
+    >Rock</button>
+
+    <button
+    onClick = "
+      playComputerMove();
+      playGame('Paper');
+    "
+    >Paper</button>
+
+    <button
+    onClick = "  
+      playComputerMove();
+      playGame('Scissors');
+    "
+    >Scissors</button>
+
+
+    <button
+    onClick = "
+      localStorage.removeItem('score');
+      alert(`Score reset successfully!`)
+    "
+    >Reset Score</button>
+  </div>
+  <script src = "rps.js">
+  </script>
+</body>
+</html>
