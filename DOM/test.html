@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button 
+  class="js-bttn"
+   id="bttn1">
+   Test 1
+  </button>
+  
+  <button 
+  class="js-bttn"
+   id="bttn2"
+   onClick = "
+    let button = document.querySelector('#bttn2');
+    button.innerHTML = 'clicked';
+   "
+   >
+   Test 2
+  </button>
+
+  <button 
+  class="js-bttn"
+   id="bttn3"
+   onClick = "
+   const para = document.querySelector('.js-output');
+   para.innerHTML = 'You just clicked the 3rd button';
+   "
+   >
+   Test 3
+  </button>
+  
+  <input type="text">
+
+  <p class = "js-output"></p>
+  <script>
+    // document.title = "DOM";
+    // const bttn = document.querySelector('#bttn3');
+    // bttn.innerHTML = "changed";
+
+
+
+  </script>
+</body>
+
+</html>
