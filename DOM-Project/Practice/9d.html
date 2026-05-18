@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input 
+   id="js-name-input"
+    type="text"
+     placeholder="Enter your name"
+     onKeyDown = "handleKeyDown(event);"
+     >
+
+  <button onClick="
+      printMessage();
+  ">Submit</button>
+
+  <p id="js-name-display"></p>
+
+  <script>
+    function printMessage() {
+      var inputName = document.querySelector('#js-name-input');
+      var name = inputName.value;
+      var nameDisplay = document.querySelector("#js-name-display");
+      nameDisplay.innerHTML = `Your name is: ${name}`;
+      inputName.value = "";
+    }
+
+    function handleKeyDown(event){
+        // if(event.key === "Enter"){
+        //   printMessage();
+        // }
+        {event.key === "Enter" && printMessage();}
+    }
+
+  </script>
+</body>
+
+</html>

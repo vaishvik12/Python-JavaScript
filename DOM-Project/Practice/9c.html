@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+    coinToss('heads')
+    ">heads</button>
+  <button
+    onclick="
+    coinToss('tails')
+    "
+  >tails</button>
+  <p id = 'result-p'></p>
+
+  <script>
+    function coinToss(choice){
+      var resultPara = document.querySelector('#result-p');
+      resultPara.innerHTML =`You chose: ${choice}`;
+    }
+  </script>
+</body>
+</html>
